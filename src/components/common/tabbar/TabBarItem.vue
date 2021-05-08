@@ -20,7 +20,7 @@ export default {
     path: String,
     activeColor: {
       type: String,
-      default: 'pink'
+      default: '#ff8198'
     }
   },
   data () {
@@ -64,6 +64,6 @@ export default {
   vertical-align: middle;
 }
 .active{
-  color: #ff0000;
+  color: var(--color-tint)
 }
 </style>

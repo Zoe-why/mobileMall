@@ -1,26 +1,26 @@
 <template>
   <div>
     <tab-bar>
-      <tab-bar-item path="/home" activeColor="deeppink">
+      <tab-bar-item path="/home">
 <!-- 路径起别名之后，使用的时候需要加 '~' -->
         <img slot="item-icon" src="~@/assets/img/tabbar/home.svg" alt="">
         <img slot="item-icon-active" src="~@/assets/img/tabbar/home_active.svg" alt="">
-        <div slot="item-text">首页</div>
+        <div slot="item-text" class="tab-text">首页</div>
       </tab-bar-item>
-      <tab-bar-item path="/category" activeColor="deeppink">
+      <tab-bar-item path="/category">
         <img slot="item-icon" src="~@/assets/img/tabbar/category.svg" alt="">
         <img slot="item-icon-active" src="~@/assets/img/tabbar/category_active.svg" alt="">
-        <div slot="item-text">分类</div>
+        <div slot="item-text" class="tab-text">分类</div>
       </tab-bar-item>
-      <tab-bar-item path="/cart" activeColor="deeppink">
+      <tab-bar-item path="/cart">
         <img slot="item-icon" src="~@/assets/img/tabbar/shopcart.svg" alt="">
         <img slot="item-icon-active" src="~@/assets/img/tabbar/shopcart_active.svg" alt="">
-        <div slot="item-text">购物车</div>
+        <div slot="item-text" class="tab-text">购物车</div>
       </tab-bar-item>
-      <tab-bar-item path="/profile" activeColor="deeppink">
+      <tab-bar-item path="/profile">
         <img slot="item-icon" src="~@/assets/img/tabbar/profile.svg" alt="">
         <img slot="item-icon-active" src="~@/assets/img/tabbar/profile_active.svg" alt="">
-        <div slot="item-text">我的</div>
+        <div slot="item-text" class="tab-text">我的</div>
       </tab-bar-item>
     </tab-bar>
   </div>
@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .tab-text {
+    font-size: 13px;
+  }
 </style>

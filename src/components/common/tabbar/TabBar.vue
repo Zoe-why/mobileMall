@@ -25,7 +25,7 @@ name: "TabBar"
   right: 0;
   bottom: 0;
 
-  box-shadow: 0 1px 1px rgba(100, 100 , 100, .3);
+  box-shadow: 0 -1px 0 rgba(100, 100 , 100, .3);
 }
 
 </style>
