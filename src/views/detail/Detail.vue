@@ -1,6 +1,7 @@
 <template>
   <div class="detail">
     <detail-nav-bar @titleClick="titleClick" ref="nav"></detail-nav-bar>
+
     <scroll class="content"
             ref="scroll"
             :probeType="3"
@@ -18,6 +19,8 @@
     <!--.native监听组件原生的点击-->
     <back-top @click.native="backTop" class="back-top" v-show="isShowBackTop"/>
     <detail-bottom-bar @addToCart="addToCart"></detail-bottom-bar>
+
+
   </div>
 </template>
 
@@ -40,6 +43,7 @@ import {getDetailData, Goods, Shop, GoodsParam, getRecommend} from "@/network/de
 import { debounce } from "@/common/utils";
 import { itemMounted } from "@/common/mixin";
 
+
 export default {
   name: "Detail",
   components: {
@@ -58,6 +62,9 @@ export default {
   mixins: [itemMounted],
   data () {
     return {
+
+      message: 'aaa',
+
       iid: null,
       topImages: [], // 顶部轮播
       goods: {},
@@ -102,7 +109,9 @@ export default {
         price: this.goods.realPrice,
         iid: this.iid
       }
-      this.$store.dispatch('addCart', cartInfo)
+      this.$store.dispatch('addCart', cartInfo).then(res => {
+        this.$toast.toastShow(res)
+      })
 
     },
     // native监听组件原生的点击

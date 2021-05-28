@@ -1,5 +1,5 @@
 <template>
-  <div class="tabbar-item" @click="itemClick">
+  <div class="tab-bar-item" @click="itemClick">
 <!-- 插槽外包一层div，可以避免替换插槽的时候，样式等属性被替换的问题 -->
     <div v-if="!isActive">
       <slot name="item-icon"></slot>
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-.tabbar-item{
+.tab-bar-item{
   /*
   flex: 1==>对Item进行均等分
   */
@@ -57,7 +57,7 @@ export default {
   height: 49px;
   font-size: 14px;
 }
-.tabbar-item img{
+.tab-bar-item img{
   width: 24px;
   margin: 3px 0 2px;
   /*去掉图片下面默认的三个像素*/

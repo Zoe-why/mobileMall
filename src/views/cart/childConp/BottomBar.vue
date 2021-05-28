@@ -3,7 +3,7 @@
     <CheckButton class="select-all" @click.native="checkBtnClick" :isChecked="isSelectAll"></CheckButton>
     <span>全选</span>
     <span class="total-price">合计: ¥{{totalPrice}}</span>
-    <span class="buy-product">去结算({{addProduct}})</span>
+    <span class="buy-product" @click="toPay">去结算({{addProduct}})</span>
   </div>
 </template>
 
@@ -52,6 +52,11 @@
           this.$store.state.cartList.forEach(item => {
             item.checked = false;
           });
+        }
+      },
+      toPay () {
+        if (this.$store.state.cartList.find(item => item.checked) === undefined) {
+          this.$toast.toastShow('请选择要购买的商品')
         }
       }
     }

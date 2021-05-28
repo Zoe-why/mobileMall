@@ -1,4 +1,4 @@
-// 函数节流
+// 函数防抖 -- 高频率事件在 n 秒内只触发一次，再次触发，重新计时
 export function debounce (func, delay) {
   let timer = null
   return function (...args) {
@@ -8,6 +8,8 @@ export function debounce (func, delay) {
     }, delay)
   }
 }
+
+
 
 export function formatDate(date, fmt) {
   if (/(y+)/.test(fmt)) {

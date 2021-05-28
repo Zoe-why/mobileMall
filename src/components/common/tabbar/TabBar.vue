@@ -1,5 +1,5 @@
 <template>
-  <div id="tabbar">
+  <div id="tab-bar">
     <slot></slot>
   </div>
 </template>
@@ -12,7 +12,7 @@ name: "TabBar"
 
 <style scoped>
 @import "../../../assets/css/base.css";
-#tabbar{
+#tab-bar{
   display: flex;
   background: #f6f6f6;
   /*配合定位

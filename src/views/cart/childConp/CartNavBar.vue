@@ -28,8 +28,6 @@ export default {
        return count
        */
       return this.$store.getters.cartListLength
-
-
     }
   }
 }
