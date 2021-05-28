@@ -42,14 +42,14 @@ const router = new VueRouter({
   mode: 'history'
 })
 
-router.beforeEach((to, from, next) => {
-  console.log(to, 'to');
-  console.log(from, 'from');
-  next()
-  // ...
-})
-router.afterEach((to, from) => {
-  console.log(to, 'afterEach');
-  // ...
-})
+// router.beforeEach((to, from, next) => {
+//   console.log(to, 'to');
+//   console.log(from, 'from');
+//   next()
+//   // ...
+// })
+// router.afterEach((to, from) => {
+//   console.log(to, 'afterEach');
+//   // ...
+// })
 export default router
