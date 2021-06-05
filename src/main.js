@@ -29,7 +29,7 @@ fastClick.prototype.focus = function (targetElement) {
 
 // 安装自己封装的插件
 Vue.use(toast) // vue.use ==> 会默认执行install()函数，同时传入vue作为参数
-// 安装lazyload
+// 安装lazy-load
 Vue.use(lazyLoad, {
   loading: require('./assets/img/common/placeholder.png')
 })
